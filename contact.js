@@ -2,8 +2,8 @@
 
 // Telegram Bot Configuration
 const TELEGRAM_CONFIG = {
-  BOT_TOKEN: "7729666506:AAGaA5rYLbZfZ38NegDqHdKBEw47sRytkNw",
-  CHAT_ID: "7729666506",
+  BOT_TOKEN: "1234567:AAGaA5rYLbZfZ38NegDqHdKBEw47sRytkNw",
+  CHAT_ID: "1234567",
 }
 
 // Contact form functionality
