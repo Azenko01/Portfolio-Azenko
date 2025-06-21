@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio Azenko</title>
+    <meta name="description" content="Get in touch with Oleksandr Azenko - Frontend Developer">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">Portfolio</span>
+                    <span class="logo-accent">Azenko</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h1 class="hero-title">Let's Work Together</h1>
+                <p class="hero-description">
+                    Have a project in mind? I'd love to hear about it. 
+                    Let's discuss how we can bring your ideas to life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-info" data-aos="fade-right">
+                    <h2>Contact Information</h2>
+                    <p>Feel free to reach out through any of these channels</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Email</h3>
+                                <a href="mailto:azenko0609@gmail.com">azenko0609@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Phone</h3>
+                                <a href="tel:+48720866592">+48 720 866 592</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/Azenko01" target="_blank">github.com/Azenko01</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Telegram</h3>
+                                <a href="https://t.me/OleksandrA0101" target="_blank">@OleksandrA0101</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h3>Location</h3>
+                                <span>Poland</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="availability-status">
+                        <div class="status-indicator"></div>
+                        <span>Available for new projects</span>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm">
+                        <h2>Send Me a Message</h2>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                            <button type="button" class="btn btn-secondary" onclick="clearForm()">
+                                <i class="fas fa-eraser"></i>
+                                Clear Form
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                    </div>
+
+                    <!-- Telegram Status Indicator -->
+                    <div class="telegram-status-container" id="telegramStatus" style="display: none;">
+                        <div class="telegram-status">
+                            <i class="fab fa-telegram"></i>
+                            <span id="telegramStatusText">Connecting to Telegram...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about working with me</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What services do you offer?</h3>
+                    <p>I specialize in frontend web development, including responsive website design, React applications, landing pages, and e-commerce solutions. I also work with backend technologies like PHP and MySQL for full-stack projects.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How long does a typical project take?</h3>
+                    <p>Project timelines vary depending on complexity and requirements. A simple landing page might take 1-2 weeks, while a complex web application could take 1-3 months. I always provide detailed timelines during project planning.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you work with international clients?</h3>
+                    <p>Yes, I work with clients worldwide. I'm comfortable with remote collaboration and have experience working across different time zones. Communication is primarily in English.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What is your development process?</h3>
+                    <p>I follow a structured approach: requirements gathering, planning, design mockups, development, testing, and deployment. I maintain regular communication throughout the project and provide updates on progress.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you provide ongoing support?</h3>
+                    <p>Yes, I offer post-launch support and maintenance services. This includes bug fixes, minor updates, and technical support to ensure your website continues to perform optimally.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What technologies do you use?</h3>
+                    <p>I primarily work with HTML5, CSS3, JavaScript, React, SASS, and various modern web technologies. For backend development, I use PHP, MySQL, and WebSocket for real-time applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Oleksandr Azenko</h3>
+                    <p>Frontend Developer</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Azenko01" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:azenko0609@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+48720866592" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li><a href="mailto:azenko0609@gmail.com">azenko0609@gmail.com</a></li>
+                            <li><a href="tel:+48720866592">+48 720 866 592</a></li>
+                            <li>Poland</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Oleksandr Azenko. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

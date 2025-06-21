@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio Azenko</title>
+    <meta name="description" content="Explore Oleksandr Azenko's portfolio of web development projects">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <span class="logo-text">Portfolio</span>
+                    <span class="logo-accent">Azenko</span>
+                </a>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero -->
+    <section class="projects-hero">
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <span class="section-subtitle">My Work</span>
+                <h1 class="hero-title">Projects Portfolio</h1>
+                <p class="hero-description">
+                    A collection of web development projects showcasing modern technologies, 
+                    clean code, and exceptional user experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="project-filters">
+        <div class="container">
+            <div class="filter-buttons" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="game">Games</button>
+                <button class="filter-btn" data-filter="webapp">Web Apps</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Pizza Landing -->
+                <div class="project-card" data-category="landing" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pizza-landing-pPP2EycLJtCQ2YbWWBOc0nwJZLqNWW.png" alt="Pizza Landing Project">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/Azenko01/Pizza-landing" class="project-btn" target="_blank" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="project-btn" onclick="openProjectModal('pizza')" title="View Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-badge featured">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Landing Page</div>
+                        <h3>Pizza Landing</h3>
+                        <p>Responsive landing page for a pizza restaurant with interactive menu, smooth animations, and modern design.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>Featured</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>Frontend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arena Battle PvP -->
+                <div class="project-card" data-category="game" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Arena%20Battle%20PvP-8PR3lOlIRZtMEp16MP7I7zVl2IxhLA.png" alt="Arena Battle PvP">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/Azenko01/Arena-Battle-PvP-Mini-Game-with-WebSocket" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="project-btn" onclick="openProjectModal('arena')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Game Development</div>
+                        <h3>Arena Battle PvP</h3>
+                        <p>Online multiplayer PvP game using WebSocket technology for real-time gameplay and combat mechanics.</p>
+                        <div class="project-tech">
+                            <span>WebSocket</span>
+                            <span>JavaScript</span>
+                            <span>HTML5</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Multiplayer</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-bolt"></i>
+                                <span>Real-time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TechStore -->
+                <div class="project-card" data-category="ecommerce" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/TechStore-XSeKpnQumsfSUkI0kZdLkYpBJYuzsH.png" alt="TechStore">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/Azenko01/TechStore" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="project-btn" onclick="openProjectModal('techstore')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">E-commerce</div>
+                        <h3>TechStore</h3>
+                        <p>Comprehensive e-commerce website for electronics with product catalog, shopping cart, and filtering.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                            <span>HTML5</span>
+                            <span>Local Storage</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>E-commerce</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-filter"></i>
+                                <span>Advanced Filters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coffee Landing -->
+                <div class="project-card" data-category="landing" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Coffee%20Landing.jpg-QIMUlhnZRwEcwybiuy19JjrFron1ID.jpeg" alt="Coffee Landing">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/Azenko01/coffee-landing" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="project-btn" onclick="openProjectModal('coffee')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Landing Page</div>
+                        <h3>Coffee Landing</h3>
+                        <p>Elegant coffee shop landing page with warm design, brand storytelling, and engaging user experience.</p>
+                        <div class="project-tech">
+                            <span>HTML5</span>
+                            <span>SCSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-coffee"></i>
+                                <span>Brand Focus</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-palette"></i>
+                                <span>Custom Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LiveRoom Chat -->
+                <div class="project-card" data-category="webapp" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/LiveRoom-XHvG276SpfFeCV0x7LOBm9j3WJECcO.png" alt="LiveRoom Chat">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <a href="https://github.com/Azenko01/LiveRoom" class="project-btn" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <button class="project-btn" onclick="openProjectModal('liveroom')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Web Application</div>
+                        <h3>LiveRoom Chat</h3>
+                        <p>Real-time chat application with modern UI, instant messaging, and beautiful gradient design.</p>
+                        <div class="project-tech">
+                            <span>WebSocket</span>
+                            <span>JavaScript</span>
+                            <span>CSS3</span>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-comments"></i>
+                                <span>Real-time Chat</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>Multi-user</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="project-stats-section" data-aos="fade-up">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Technologies Used</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-aos="fade-up">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Interested in Working Together?</h2>
+                <p>Let's discuss your next project and bring your ideas to life</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-paper-plane"></i>
+                        Get In Touch
+                    </a>
+                    <a href="skills.html" class="btn btn-secondary btn-large">
+                        <i class="fas fa-tools"></i>
+                        View Skills
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Oleksandr Azenko</h3>
+                    <p>Frontend Developer</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Azenko01" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:azenko0609@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+48720866592" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="skills.html">Skills</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li><a href="mailto:azenko0609@gmail.com">azenko0609@gmail.com</a></li>
+                            <li><a href="tel:+48720866592">+48 720 866 592</a></li>
+                            <li>Poland</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Oleksandr Azenko. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Modals -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProjectModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+</body>
+</html>
